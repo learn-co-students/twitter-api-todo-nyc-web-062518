@@ -31,7 +31,7 @@ describe TwitterApi do
         user = client.find_followers_for("sm_debenedetto")
         expect(user).to be_a(Array)
         expect(user.count).to eq(10)
-        expect(user.first.class).to eq(Hash)
+        expect(user.first.class).to eq(Twitter::User)
         expect(user.first[:name]).to eq("Adeline Gross")
       end
     end
